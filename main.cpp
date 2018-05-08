@@ -17,10 +17,15 @@ bool hamCycle(vector<int> adj[], int start, int V);
 
 
 int main(int argc, char* argv[]) {
-    string arg = argv[1];
-    if(argc == 2 && arg == "test") {
-        test();
-    } else if(argc == 0) {
+    if(argc == 2) {
+        string arg = argv[1];
+        if(arg == "test") {
+            test();
+        } else {
+            cout << "Incorrect arguments\n";
+            exit(1);
+        }
+    } else if(argc == 1) {
         int V;
         cout << "Choose the amount of vertices: ";
         cin >> V;
